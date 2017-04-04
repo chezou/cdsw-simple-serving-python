@@ -87,3 +87,10 @@ ENV/
 
 # Rope project settings
 .ropeproject
+*.pyc
+.cache
+.pip
+.ipython
+.local
+.ssh
+*~
