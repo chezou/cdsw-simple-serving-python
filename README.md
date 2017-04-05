@@ -1,8 +1,8 @@
 # cdsw-simple-serving-python
 
-![](job_screenshot.png)
-
 This is aim to Python version of [cdsw-simple-serving](https://github.com/srowen/cdsw-simple-serving).
+
+![](job_screenshot.png)
 
 This repo has:
 
