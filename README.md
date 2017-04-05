@@ -7,11 +7,11 @@ This repo has:
 - data preparation with RDD
 - built a simple machine learning pipeline with Spark.ml
 - export built model
+- example web server code for scoring
 
 Currently, this repo doesn't have following features:
 
 - export built model as PMML
-- saple web server code for scoring
 
 ## requirements
 
