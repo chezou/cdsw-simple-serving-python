@@ -23,6 +23,8 @@ Currently, this repo doesn't have following features:
 
 ## You can use this repo for:
 
+![](job_screenshot.png)
+
 - as a template for collaboration with Data Engineer and Data Scientist
 - crete job dependencies from data preparation to model serving
 
