@@ -7,7 +7,7 @@ import json
 
 MASTER = 'local'
 APPNAME = 'simple-ml-serving'
-MODEL_PATH = 'file:///home/sense/model/spark-model2'
+MODEL_PATH = 'file:///home/sense/model/spark-model'
 
 spark = SparkSession.builder.master(MASTER).appName(APPNAME).getOrCreate()
 model = PipelineModel.load(MODEL_PATH)
@@ -16,7 +16,7 @@ model = PipelineModel.load(MODEL_PATH)
 def classify(input):
   #target_columns = input.columns + ["prediction"]
   target_columns = ["prediction"]
-  return model.transform(input_df).select(target_columns).collect()
+  return model.transform(input).select(target_columns).collect()
 
 # webapp
 app = Flask(__name__)
@@ -24,11 +24,9 @@ app = Flask(__name__)
 
 @app.route('/api/predict', methods=['POST'])
 def predict():
-  input_json = json.loads(request.json)
-  input_RDD = spark.sparkContext.parallelize([input_json])
-  input_df = spark.read.json(input_RDD)
+  input_df = spark.sparkContext.parallelize([request.json]).toDF()
   output = classify(input_df)
-  return jsonify(retuls=output)
+  return jsonify(input=request.json, prediction=output)
 
 @app.route('/')
 def main():
