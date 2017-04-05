@@ -1,5 +1,7 @@
 # cdsw-simple-serving-python
 
+![](job_screenshot.png)
+
 This is aim to Python version of [cdsw-simple-serving](https://github.com/srowen/cdsw-simple-serving).
 
 This repo has:
@@ -22,8 +24,6 @@ Currently, this repo doesn't have following features:
 - `HDFS_HOST` for handling HDFS files via `hdfs` package
 
 ## You can use this repo for:
-
-![](job_screenshot.png)
 
 - as a template for collaboration with Data Engineer and Data Scientist
 - crete job dependencies from data preparation to model serving
