@@ -7,8 +7,8 @@ import json
 
 MASTER = 'local'
 APPNAME = 'simple-ml-serving'
-#MODEL_PATH = 'file:///home/sense/model/spark-model'
-MODEL_PATH = 'file:///Users/ariga/work/cdsw-simple-serve-python/model/spark-model'
+MODEL_PATH = 'file:///home/cdsw/cdsw-simple-serving-python/model/spark-model'
+#MODEL_PATH = 'file:///Users/ariga/work/cdsw-simple-serve-python/model/spark-model'
 
 spark = SparkSession.builder.master(MASTER).appName(APPNAME).getOrCreate()
 model = PipelineModel.load(MODEL_PATH)
