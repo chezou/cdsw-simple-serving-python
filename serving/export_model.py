@@ -5,7 +5,7 @@ def export():
   training = read_data(generate=False)
   pipeline = build_model(training)
   
-  target_path = "file:///tmp/spark-model"
+  target_path = "hdfs:///tmp/spark-model"
   pipeline.write().overwrite().save(target_path)
   
 if __name__ == "__main__":
