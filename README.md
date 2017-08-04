@@ -17,7 +17,7 @@ Currently, this repo doesn't have following features:
 
 ## requirements
 
-`pip install -r requirements.txt`
+`pip install -r requirements.txt -c constraints.txt`
 
 ## Set the environment variable
 
