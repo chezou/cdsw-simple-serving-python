@@ -30,7 +30,7 @@ def predict():
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    return "It works!"
 
 
 if __name__ == '__main__':
