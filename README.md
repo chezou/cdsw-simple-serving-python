@@ -26,7 +26,7 @@ Currently, this repo doesn't have following features:
 ## You can use this repo for:
 
 - as a template for collaboration with Data Engineer and Data Scientist
-- crete job dependencies from data preparation to model serving
+- create job dependencies from data preparation to model serving
 
 ## How to run sample web app
 
